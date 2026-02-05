@@ -27,7 +27,7 @@ class FaithPanelProvider extends PanelProvider
             ->default()
             ->id('faith')
             ->path('faith')
-            ->login()
+            ->login(\App\Filament\Pages\Auth\Login::class)
             ->colors([
                 'primary' => Color::Amber,
             ])
