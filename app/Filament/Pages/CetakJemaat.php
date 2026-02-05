@@ -27,4 +27,12 @@ class CetakJemaat extends Page
             ->orderBy('nama')
             ->get();
     }
+
+    protected function getViewData(): array
+    {
+        return [
+            'data' => $this->getJemaatData(),
+            'profil' => \App\Models\ProfilGereja::first(),
+        ];
+    }
 }

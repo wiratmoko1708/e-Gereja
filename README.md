@@ -117,9 +117,11 @@ ada 2 level user:
 - **Email**: `gembala@gmail.com`
 - **Password**: `password`
 
-1. Operator => akses menu tertentu
+2. Operator => akses menu tertentu
 - **Email**: `operator@gmail.com`
 - **Password**: `password`
+
+Web Demo : https://e-gereja.my.id/
 
 ---
 *Dibuat dengan ❤️ untuk kemuliaan nama Tuhan.*
