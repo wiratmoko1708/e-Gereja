@@ -20,11 +20,11 @@ class PernikahansTable
                 TextColumn::make('nomer_pernikahan')->label('Nomer Pernikahan')->sortable()->searchable(),
                 TextColumn::make('nama_pria')->label('Nama Pria')->sortable()->searchable(),
                 TextColumn::make('tempat_lahir_pria')->label('Tempat Lahir Pria')->sortable(),
-                TextColumn::make('tanggal_lahir_pria')->label('Tanggal Lahir Pria')->date()->sortable(),
+                TextColumn::make('tanggal_lahir_pria')->label('Tanggal Lahir Pria')->formatStateUsing(fn ($state) => $state ? \Carbon\Carbon::parse($state)->locale('id')->translatedFormat('d F Y') : '-')->sortable(),
                 TextColumn::make('nomer_hp_pria')->label('Nomer HP Pria'),
                 TextColumn::make('nama_wanita')->label('Nama Wanita')->sortable()->searchable(),
                 TextColumn::make('tempat_lahir_wanita')->label('Tempat Lahir Wanita')->sortable(),
-                TextColumn::make('tanggal_lahir_wanita')->label('Tanggal Lahir Wanita')->date()->sortable(),
+                TextColumn::make('tanggal_lahir_wanita')->label('Tanggal Lahir Wanita')->formatStateUsing(fn ($state) => $state ? \Carbon\Carbon::parse($state)->locale('id')->translatedFormat('d F Y') : '-')->sortable(),
                 TextColumn::make('nomer_hp_wanita')->label('Nomer HP Wanita'),
                 ImageColumn::make('foto')->label('Foto'),
             ])

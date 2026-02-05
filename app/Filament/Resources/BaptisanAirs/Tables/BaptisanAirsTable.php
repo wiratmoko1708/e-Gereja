@@ -22,10 +22,10 @@ class BaptisanAirsTable
                 TextColumn::make('nama')->label('Nama')->sortable()->searchable(),
                 TextColumn::make('jenis_kelamin')->label('Jenis Kelamin')->sortable(),
                 TextColumn::make('tempat_lahir')->label('Tempat Lahir')->sortable(),
-                TextColumn::make('tanggal_lahir')->label('Tanggal Lahir')->date()->sortable(),
+                TextColumn::make('tanggal_lahir')->label('Tanggal Lahir')->formatStateUsing(fn ($state) => $state ? \Carbon\Carbon::parse($state)->locale('id')->translatedFormat('d F Y') : '-')->sortable(),
                 TextColumn::make('nama_ayah')->label('Nama Ayah')->sortable(),
                 TextColumn::make('nama_ibu')->label('Nama Ibu')->sortable(),
-                TextColumn::make('tanggal_baptis')->label('Tanggal Baptis')->date()->sortable(),
+                TextColumn::make('tanggal_baptis')->label('Tanggal Baptis')->formatStateUsing(fn ($state) => $state ? \Carbon\Carbon::parse($state)->locale('id')->translatedFormat('d F Y') : '-')->sortable(),
                 ImageColumn::make('foto')->label('Foto'),
             ])
             ->filters([

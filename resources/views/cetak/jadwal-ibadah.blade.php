@@ -69,7 +69,7 @@
         <div class="header-text" style="text-align: center; width: 100%;">
             <h1>{{ $profil->nama_gereja ?? 'Gereja Ajaib Benar Anugerah' }}</h1>
             <p>Laporan Jadwal Ibadah</p>
-            <p>Tanggal Cetak: {{ now()->format('d F Y') }}</p>
+            <p>Tanggal Cetak: {{ now()->locale('id')->translatedFormat('d F Y') }}</p>
         </div>
         <div style="width: 80px;"></div> <!-- Spacer for balancing if needed, or just remove space-between -->
     </div>

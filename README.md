@@ -18,7 +18,7 @@ Pastikan komputer Anda sudah terinstall:
 Langkah pertama adalah mengambil source code aplikasi dari GitHub. Buka terminal atau command prompt dan jalankan perintah:
 
 ```bash
-git clone https://github.com/wiratmoko1708/e-gereja.git
+git clone https://github.com/wiratmoko1708/e-Gereja.git
 ```
 
 Masuk ke direktori project:
@@ -111,5 +111,15 @@ Gunakan kredensial berikut (jika menggunakan seeder default):
 - **Password**: `password`
 
 ---
+Jika anda import dari database contoh (dbcontoh.sql ):
+ada 2 level user:
+1. Admin => akses semua menu
+- **Email**: `gembala@gmail.com`
+- **Password**: `password`
+
+1. Operator => akses menu tertentu
+- **Email**: `operator@gmail.com`
+- **Password**: `password`
+
+---
 *Dibuat dengan ❤️ untuk kemuliaan nama Tuhan.*
-e-Gereja

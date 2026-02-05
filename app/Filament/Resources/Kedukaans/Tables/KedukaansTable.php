@@ -23,10 +23,10 @@ class KedukaansTable
                 TextColumn::make('kota')->label('Kota')->sortable(),
                 TextColumn::make('jenis_kelamin')->label('Jenis Kelamin')->sortable(),
                 TextColumn::make('tempat_lahir')->label('Tempat Lahir')->sortable(),
-                TextColumn::make('tanggal_lahir')->label('Tanggal Lahir')->date()->sortable(),
-                TextColumn::make('tanggal_kematian')->label('Tanggal Kematian')->date()->sortable(),
+                TextColumn::make('tanggal_lahir')->label('Tanggal Lahir')->formatStateUsing(fn ($state) => $state ? \Carbon\Carbon::parse($state)->locale('id')->translatedFormat('d F Y') : '-')->sortable(),
+                TextColumn::make('tanggal_kematian')->label('Tanggal Kematian')->formatStateUsing(fn ($state) => $state ? \Carbon\Carbon::parse($state)->locale('id')->translatedFormat('d F Y') : '-')->sortable(),
                 TextColumn::make('tempat_pemakaman')->label('Tempat Pemakaman')->sortable(),
-                TextColumn::make('tanggal_pemakaman')->label('Tanggal Pemakaman')->date()->sortable(),
+                TextColumn::make('tanggal_pemakaman')->label('Tanggal Pemakaman')->formatStateUsing(fn ($state) => $state ? \Carbon\Carbon::parse($state)->locale('id')->translatedFormat('d F Y') : '-')->sortable(),
             ])
             ->filters([
                 //

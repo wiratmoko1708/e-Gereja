@@ -61,4 +61,15 @@ class CetakController extends Controller
             'profil' => $profil,
         ]);
     }
+
+    public function jemaatIndividual($id)
+    {
+        $jemaat = \App\Models\Jemaat::with('komsel')->findOrFail($id);
+        $profil = \App\Models\ProfilGereja::first();
+
+        return view('cetak.jemaat-individual', [
+            'jemaat' => $jemaat,
+            'profil' => $profil,
+        ]);
+    }
 }

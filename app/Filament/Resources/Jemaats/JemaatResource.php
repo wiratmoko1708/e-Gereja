@@ -106,6 +106,11 @@ class JemaatResource extends Resource
             ])
             ->actions([
                 EditAction::make(),
+                \Filament\Actions\Action::make('cetak_pdf')
+                    ->label('Cetak PDF')
+                    ->icon('heroicon-o-printer')
+                    ->url(fn (Jemaat $record) => route('cetak.jemaat.individual', $record->id))
+                    ->openUrlInNewTab(),
                 DeleteAction::make(),
             ])
             ->bulkActions([
